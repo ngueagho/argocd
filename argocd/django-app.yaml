@@ -4,12 +4,12 @@ metadata:
   name: django-app
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: docker.io/robertolandry/argocd
+    argocd-image-updater.argoproj.io/image-list: docker.io/robertolandry/django-app
     argocd-image-updater.argoproj.io/argocd.update-strategy: latest
 spec:
   project: default
   source:
-    repoURL: https://github.com/ngueagho/ci-cd_build_django.git
+    repoURL: https://github.com/ngueagho/argocd.git
     targetRevision: main
     path: k8s
   destination:
